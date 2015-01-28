@@ -1,0 +1,10 @@
+<h1>Bank Account</h1>
+<% @transactions.each do |t| %>
+<table>
+<tr><%= t.name %>: <%= t.amount %></tr>
+<% end %>
+</table>
+
+<h3>Balance: <%= @balance %></h3>
+
+<%= render "transactions/form" %>
