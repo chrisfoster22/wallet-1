@@ -1,12 +1,14 @@
 <h1>Bank Account</h1>
 <% @transactions.each do |t| %>
-<table>
-<tr><%= t.name %>: <%= t.amount %></tr>
+  <table>
+    <tr><%= t.name %>: <%= t.amount %> <%= link_to 'Show', t %><span> </span> <%= link_to 'Edit', edit_transaction_path(t) %><span> </span><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </table>
 <% end %>
-</table>
 
 <h3>Balance: <%= @balance %></h3>
 
+<h3>New Transaction!</h3>
+<p>Don't forget to include "-" when the transaction is a withdrawal.
 <%= render "transactions/form" %>
 <p><%= link_to "See, edit, add, or remove transactions.", '../transactions' %></p>
 <h2><%= @misleading_statement %></h2>
