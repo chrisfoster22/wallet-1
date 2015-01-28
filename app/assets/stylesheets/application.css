@@ -14,11 +14,11 @@
  *= require_self
  */
 
- table {
-   font-color: green;
- }
+h1 {
+  color: hotpink;
+}
 
  tr {
-   background-color: green;
-   color: white;
+   background-color: white;
+   color: darkred;
  }
